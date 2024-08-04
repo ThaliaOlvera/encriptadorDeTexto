@@ -3,6 +3,13 @@
   min-width: 0;
 }
 
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
 :root {
   --primary-color: #052122;
   --secondary-color: #ecd8c6;
@@ -13,6 +20,7 @@
   --font-size-lx: 24px;
   --font-size-md: 16px;
   --fonst-size-sm: 12px;
+  --font-TitleText: montserrat;
 }
 
 body {
@@ -50,6 +58,7 @@ main {
   top: 0;
   font-size: 1.5rem;
   color: var(--text-secondary-color);
+  font-family: var(--font-TitleText);
 }
 
 .principal_text input:focus {
@@ -64,7 +73,7 @@ main {
   width: 90%;
   height: 45vh;
   margin-top: 100px;
-  font-size: 16px;
+  font-size: var(--font-size-md);
   box-sizing: border-box;
   border: 2px solid var(--primary-color);
   background-color: var(--primary-color);
@@ -83,6 +92,7 @@ main {
   width: 35%;
   text-align: start;
   font-size: var(--fonst-size-sm);
+  font-family: var(--font-TitleText);
   color: var(--text-terciary-color);
 }
 
@@ -97,6 +107,7 @@ main {
   margin-left: 10px;
   border-radius: 15px;
   border: solid 0px;
+  font-family: var(--font-TitleText);
   color: var(--text-terciary-color);
   background-color: var(--terciary-color);
 }
@@ -114,6 +125,7 @@ main {
   justify-content: center;
   margin-top: 20px;
   margin-left: 100px;
+  font-family: var(--font-TitleText);
   background-color: var(--secondary-color);
   border-radius: 20px;
 }
@@ -134,6 +146,7 @@ footer {
   height: 4vh;
   margin-top: 35px;
   font-size: var(--fonst-size-sm);
+  font-family: var(--font-TitleText);
   text-align: center;
   color: var(--text-terciary-color);
 }
@@ -177,7 +190,7 @@ footer {
     margin-left: 5px;
     margin-right: 5px;
     width: 45%;
-    height: 45px;
+    height: 40px;
   }
 
   .container_btn p {
@@ -193,7 +206,7 @@ footer {
   .result_container {
     margin-left: 12px;
     width: 95%;
-    height: 15vh;
+    height: 20vh;
   }
 
   .result_container img {
@@ -228,5 +241,11 @@ footer {
 
   .container_btn p {
     position: inherit;
+  }
+
+  footer {
+    margin-top: 8px;
+    background-color: red;
+    height: 23vh;
   }
 }
