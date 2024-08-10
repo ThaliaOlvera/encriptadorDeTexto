@@ -30,16 +30,25 @@
             <img src="img/bi_exclamation-circle-fill.png" alt="" srcset="" />
             Solo letras minusculas y sin acento
           </p>
-          <button>Encriptar</button>
-          <button>Desencriptar</button>
+          <button class="btn_encrypt" onclick="btnEncriptar()">
+            Encriptar
+          </button>
+          <button class="btn_decrypt" onclick="btnDesencriptar()">
+            Desencriptar
+          </button>
         </div>
       </section>
 
       <section class="result_text">
         <div class="result_container">
-          <img src="img/Muñeco.png" alt="" srcset="" />
-          <h4>Ningún Mensaje fue encontrado</h4>
-          <p>Ingresa el texto que deseas encriptar o desencriptar</p>
+          <img class="resultbg" src="img/Muñeco.png" alt="" srcset="" />
+          <h4 class="title_result">Ningún Mensaje fue encontrado</h4>
+          <textarea class="mensaje" name="" id="">
+ Ingresa el texto que deseas encriptar o desencriptar
+          </textarea>
+          <div class="container_copybtn">
+            <button class="copyBtn">Copiar</button>
+          </div>
         </div>
       </section>
     </main>
@@ -47,5 +56,6 @@
     <footer>
       <p>Encriptador de Texto - Desarrollado por Thalia Olvera 2024</p>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>

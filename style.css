@@ -19,7 +19,7 @@
   --text-terciary-color: #f0f7f6;
   --font-size-lx: 24px;
   --font-size-md: 16px;
-  --fonst-size-sm: 12px;
+  --font-size-sm: 12px;
   --font-TitleText: montserrat;
 }
 
@@ -91,7 +91,7 @@ main {
   position: absolute;
   width: 35%;
   text-align: start;
-  font-size: var(--fonst-size-sm);
+  font-size: var(--font-size-sm);
   font-family: var(--font-TitleText);
   color: var(--text-terciary-color);
 }
@@ -135,17 +135,50 @@ main {
   margin-left: 40px;
 }
 
-.result_container h4,
-p {
+.result_container h4 {
   width: 85%;
-  margin-left: 25px;
   text-align: center;
+  margin-left: 25px;
+}
+
+textarea {
+  width: 100%;
+  height: 30vh;
+  padding: 10px;
+  text-wrap: balance;
+  text-align: center;
+  color: var(--text-primary-color);
+  font-size: var(--font-size-md);
+  font-family: var(--font-TitleText);
+  background-color: var(--secondary-color);
+  cursor: default;
+  scrollbar-width: none;
+  border: #ecd8c6;
+  resize: none;
+  outline: none;
+}
+
+.container_copybtn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.copyBtn {
+  width: 50%;
+  height: 8vh;
+  border-radius: 10px;
+  border: none;
+  background-color: var(--terciary-color);
+  color: var(--text-terciary-color);
+  font-size: var(--font-size-md);
+  cursor: pointer;
 }
 
 footer {
   height: 4vh;
   margin-top: 35px;
-  font-size: var(--fonst-size-sm);
+  font-size: var(--font-size-sm);
   font-family: var(--font-TitleText);
   text-align: center;
   color: var(--text-terciary-color);
@@ -216,6 +249,7 @@ footer {
   footer {
     height: 15vh;
     display: flex;
+    justify-content: center;
     align-items: end;
   }
 }
@@ -243,9 +277,14 @@ footer {
     position: inherit;
   }
 
+  .result_container {
+    margin-left: 20px;
+    width: 90%;
+    height: 20vh;
+  }
+
   footer {
     margin-top: 8px;
-    background-color: red;
     height: 23vh;
   }
 }
