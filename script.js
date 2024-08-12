@@ -2,6 +2,7 @@ const textArea = document.querySelector(".textarea");
 const mensaje = document.querySelector(".mensaje");
 const imageBg = document.querySelector(".resultbg");
 const titleMesaje = document.querySelector(".title_result");
+document.querySelector("#copy").addEventListener("click", copy);
 
 function btnEncriptar() {
   const textoEncriptado = encriptar(textArea.value);
@@ -38,6 +39,9 @@ function btnDesencriptar() {
   const textoEncriptado = desencriptar(textArea.value);
   mensaje.value = textoEncriptado;
   textArea.value = "";
+  imageBg.remove();
+  titleMesaje.remove();
+  contenedor.appendChild(boton);
 }
 
 function desencriptar(stringDesencriptada) {
@@ -48,11 +52,22 @@ function desencriptar(stringDesencriptada) {
     ["o", "ober"],
     ["u", "ufat"],
   ];
+
   stringDesencriptada = stringDesencriptada.toLowerCase();
 
   for (let i = 0; i < matrizCodigo.length; i++) {
-    if (stringDesencriptada.includes(matrizCodigo[i][1], matrizCodigo[i][0])) {
+    if (stringDesencriptada.includes(matrizCodigo[i][0])) {
+      stringDesencriptada = stringDesencriptada.replaceAll(
+        matrizCodigo[i][1],
+        matrizCodigo[i][0]
+      );
     }
   }
   return stringDesencriptada;
+}
+
+function copy() {
+  let copyText = document.querySelector("#textdecrypt");
+  copyText.select();
+  document.execCommand("copy");
 }
