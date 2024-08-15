@@ -33,7 +33,7 @@ h1,
 h2,
 h3,
 h4 {
-  text-wrap: balance;
+  text-wrap: pretty;
 }
 header img {
   position: absolute;
@@ -176,9 +176,13 @@ textarea {
 }
 
 .alert {
-  width: 15%;
+  width: 22%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: fixed;
-  top: 70vh;
+  top: 60vh;
   text-align: center;
   color: var(--text-terciary-color);
   font-size: var(--font-size-sm);
@@ -186,17 +190,13 @@ textarea {
   background-color: var(--terciary-color);
   border-radius: 10px;
   box-shadow: 5px 5px 20px 1px var(--primary-color);
-  display: flex;
-  justify-content: center;
 }
 
 .alert img {
-  width: 13%;
-  height: 4vh;
-  margin-right: 10px;
-  margin-left: 0px;
-  margin-top: 10px;
-  background-color: var(--text-terciary-color);
+  width: 30px;
+  height: 25px;
+  margin-right: 5px;
+  margin-left: 5px;
   opacity: 0.5;
   border-radius: 50px;
 }
@@ -210,7 +210,7 @@ footer {
   color: var(--text-terciary-color);
 }
 
-/* Vista en Tablet */
+/* Tablet */
 @media (max-width: 768px) {
   main {
     display: inline-block;
@@ -220,29 +220,23 @@ footer {
 
   .principal_text {
     width: 100%;
-    height: 70vh;
+    height: 60vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin-bottom: 20px;
     border-radius: 0%;
   }
 
   .principal_text input::placeholder {
-    width: 80%;
+    width: 50%;
     font-size: var(--font-size-lx);
     text-align: start;
   }
 
   .textarea {
-    width: 70%;
+    width: 80%;
     margin-left: 40px;
-    height: 20vh;
-  }
-
-  .container_btn {
-    margin-top: 8px;
-    margin-bottom: 20px;
-    height: 15vh;
   }
 
   .container_btn button {
@@ -258,14 +252,14 @@ footer {
 
   .result_text {
     width: 100%;
-    height: 20vh;
+    height: 30vh;
     display: flex;
   }
 
   .result_container {
-    margin-left: 12px;
+    margin-left: 13px;
     width: 95%;
-    height: 20vh;
+    height: 26vh;
   }
 
   .result_container img {
@@ -277,8 +271,14 @@ footer {
     height: 6vh;
   }
 
+  .alert {
+    position: fixed;
+    left: 8vh;
+    top: 80vh;
+  }
+
   footer {
-    height: 15vh;
+    height: 25vh;
     display: flex;
     justify-content: center;
     align-items: end;
@@ -286,6 +286,10 @@ footer {
 }
 /*MOBILE*/
 @media (max-width: 483px) {
+  .principal_text {
+    height: 59vh;
+  }
+
   .principal_text input::placeholder {
     text-wrap: wrap;
     text-align: start;
@@ -306,16 +310,29 @@ footer {
 
   .container_btn p {
     position: inherit;
+    margin-left: 15px;
   }
 
   .result_container {
-    margin-left: 20px;
-    width: 90%;
-    height: 20vh;
+    margin-left: 10px;
+    height: 30vh;
+  }
+
+  .copyBtn {
+    width: 50%;
+    background-color: red;
+  }
+
+  .alert {
+    width: 80%;
+    height: 40px;
+    position: fixed;
+    left: 4vh;
+    top: 82vh;
   }
 
   footer {
     margin-top: 8px;
-    height: 23vh;
+    height: 29vh;
   }
 }
