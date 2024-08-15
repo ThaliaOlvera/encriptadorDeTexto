@@ -10,7 +10,6 @@ function btnEncriptar() {
   textArea.value = "";
   imageBg.remove();
   titleMesaje.remove();
-  contenedor.appendChild(boton);
 }
 
 function encriptar(stringEncriptada) {
