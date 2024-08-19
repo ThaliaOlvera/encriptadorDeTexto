@@ -35,6 +35,25 @@ h3,
 h4 {
   text-wrap: pretty;
 }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
 header img {
   position: absolute;
   width: 70px;
@@ -196,15 +215,26 @@ textarea {
   height: 50px;
   margin-top: 10px;
   margin-bottom: 20px;
-  display: flex;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
   align-items: center;
   justify-content: center;
   color: var(--text-terciary-color);
   font-size: var(--font-size-sm);
   font-family: var(--font-TitleText);
-  background-color: var(--terciary-color);
+  background-color: #239b56;
   border-radius: 10px;
   box-shadow: 5px 5px 20px 1px var(--primary-color);
+}
+
+.alert.show {
+  display: flex;
+  animation: fadeIn 0.5s forwards; /* Aplicar fade in */
+}
+
+.alert.hide {
+  animation: fadeOut 0.5s forwards; /* Aplicar fade out */
 }
 
 .alert img {
