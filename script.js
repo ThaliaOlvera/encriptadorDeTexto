@@ -4,13 +4,24 @@ const imageBg = document.querySelector(".resultbg");
 const titleMesaje = document.querySelector(".title_result");
 document.querySelector("#copy").addEventListener("click", copy);
 const alerta = document.querySelector(".alert");
+const caracteresValidos = /^[a-z\s]*$/;
 
 function btnEncriptar() {
-  const textoEncriptado = encriptar(textArea.value);
+  const textoOriginal = textArea.value;
+
+  if (!caracteresValidos.test(textoOriginal)) {
+    alert(
+      "El texto contiene caracteres inválidos. Solo se permiten letras minúsculas y espacios."
+    );
+    return false;
+  }
+
+  const textoEncriptado = encriptar(textoOriginal);
   mensaje.value = textoEncriptado;
   textArea.value = "";
   imageBg.remove();
   titleMesaje.remove();
+  return true;
 }
 
 function encriptar(stringEncriptada) {
