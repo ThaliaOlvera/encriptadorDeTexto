@@ -18,13 +18,19 @@
     </header>
     <main>
       <section class="principal_text">
-        <input
-          class="textarea"
-          type="text"
-          name=""
-          id=""
-          placeholder="Ingrese el texto aquí"
-        />
+        <div class="container_textarea">
+          <input
+            class="textarea"
+            type="text"
+            name=""
+            id=""
+            placeholder="Ingrese el texto aquí"
+          />
+          <div class="errorText"">
+            <img src="img/exclamation.svg" />
+            <h3>El texto contiene caracteres inválidos</h3>
+          </div>
+        </div>
         <div class="container_btn">
           <p>
             <img src="img/bi_exclamation-circle-fill.png" alt="" srcset="" />
