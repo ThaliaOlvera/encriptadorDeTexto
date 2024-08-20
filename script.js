@@ -5,14 +5,13 @@ const titleMesaje = document.querySelector(".title_result");
 document.querySelector("#copy").addEventListener("click", copy);
 const alerta = document.querySelector(".alert");
 const caracteresValidos = /^[a-z\s]*$/;
+const errorAlerta = document.querySelector(".errorText");
 
 function btnEncriptar() {
   const textoOriginal = textArea.value;
 
   if (!caracteresValidos.test(textoOriginal)) {
-    alert(
-      "El texto contiene caracteres inválidos. Solo se permiten letras minúsculas y espacios."
-    );
+    errorAlerta.style.display = "flex";
     return false;
   }
 
@@ -21,6 +20,8 @@ function btnEncriptar() {
   textArea.value = "";
   imageBg.remove();
   titleMesaje.remove();
+  errorAlerta.style.display = "none";
+
   return true;
 }
 
