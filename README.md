@@ -1,4 +1,4 @@
-### README - Encriptador de Texto
+# Encriptador de Texto
 
 ## Descripción
 
@@ -13,13 +13,13 @@ El **Encriptador de Texto** es una aplicación web simple diseñada para encript
 
 ## Estructura del Proyecto
 
-### 1. Archivos Principales
+### Archivos Principales
 
 - **index.html**: Contiene la estructura HTML de la aplicación.
 - **style.css**: Contiene los estilos CSS que definen la apariencia de la aplicación.
 - **script.js**: Contiene la lógica JavaScript para la encriptación, desencriptación, validación de texto y manejo de eventos.
 
-### 2. Estructura HTML
+### Estructura HTML
 
 - **Encabezado**: Contiene el logotipo de la aplicación.
 - **Sección Principal**:
@@ -30,13 +30,13 @@ El **Encriptador de Texto** es una aplicación web simple diseñada para encript
   - **Botón Copiar**: Permite copiar el texto resultante al portapapeles.
   - **Alertas**: Mensajes de éxito o error al copiar el texto o validar caracteres.
 
-### 3. Estilos CSS
+### Estilos CSS
 
 - Definición de variables CSS para colores, tamaños de fuente y otros estilos.
 - Responsividad para adaptar la interfaz a diferentes tamaños de pantalla (tablet y móvil).
 - Animaciones para alertas y botones interactivos.
 
-### 4. Lógica JavaScript
+### Lógica JavaScript
 
 - **btnEncriptar**: Función para encriptar el texto ingresado.
 - **btnDesencriptar**: Función para desencriptar el texto.
