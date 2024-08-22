@@ -316,6 +316,11 @@ footer p {
   .result_container {
     width: 80%;
     height: 50vh;
+    margin-top: 20px;
+  }
+
+  .result_container textarea {
+    margin-top: 40px;
   }
 
   .result_container img {
@@ -356,6 +361,14 @@ footer p {
 
   .container_btn button {
     width: 90%;
+  }
+
+  .result_container {
+    margin-top: 40px;
+  }
+
+  .result_container textarea {
+    margin-top: 40px;
   }
 
   footer {
