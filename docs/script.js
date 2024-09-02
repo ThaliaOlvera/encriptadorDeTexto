@@ -71,22 +71,9 @@ function desencriptar(stringDesencriptada) {
 }
 
 function copy() {
-  let copyText = document.querySelector("#textdecrypt");
+  let copyText = document.querySelector("#textareaOutput");
   copyText.select();
   document.execCommand("copy");
-  alerta.style.display = "flex";
-
-  alerta.classList.add("show");
-  alerta.classList.remove("hide");
-
-  setTimeout(function () {
-    alerta.classList.add("hide");
-    alerta.classList.remove("show");
-
-    setTimeout(function () {
-      alerta.style.display = "none";
-    }, 500);
-  }, 2000);
 }
 
 function clear() {
