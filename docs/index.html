@@ -14,7 +14,11 @@
       <section class="bgColor">
         <article class="container_btn_encrypt">
           <div>
-            <img src="img/Lock.svg" alt="Lock image" />
+            <img
+              onclick=" btnEncriptar()"
+              src="img/Lock.svg"
+              alt="Lock image"
+            />
             <h3>Encrypt</h3>
           </div>
         </article>
@@ -33,15 +37,19 @@
               readonly
             ></textarea>
             <div class="container_button">
-              <button>Clear text</button>
-              <button>Copy!</button>
+              <button id="clearText" onclick="clear()">Clear text</button>
+              <button id="copy">Copy!</button>
             </div>
           </article>
         </div>
 
         <article class="container_btn_decrypt">
           <div>
-            <img src="img/Unlock.svg" alt="buttonDecrypt" />
+            <img
+              onclick="btnDesencriptar()"
+              src="img/Unlock.svg"
+              alt="buttonDecrypt"
+            />
             <h3>Decrypt</h3>
           </div>
         </article>
@@ -52,5 +60,6 @@
       <a href="https://www.linkedin.com/in/thalia-olvera/">LinkedIn</a>
       <a href="https://github.com/ThaliaOlvera">Github</a>
     </footer>
+    <script src="./script.js"></script>
   </body>
 </html>
