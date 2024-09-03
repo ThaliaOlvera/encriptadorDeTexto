@@ -1,11 +1,12 @@
 const textArea = document.querySelector("#textAreaEntry");
 const mensaje = document.querySelector("#textareaOutput");
-document.querySelector("#copy").addEventListener("click", copy);
+const checkCopy = document.querySelector(".confirm_container");
+document.querySelector("#copy").addEventListener("click", showConfirm);
 document.querySelector("#clearText").addEventListener("click", clear);
-const caracteresValidos = /^[a-z\s]*$/;
 
 function btnEncriptar() {
   const textoOriginal = textArea.value;
+  const caracteresValidos = /^[a-z\s]*$/;
 
   if (!caracteresValidos.test(textoOriginal)) {
     errorAlerta.style.display = "flex";
@@ -70,10 +71,19 @@ function desencriptar(stringDesencriptada) {
   return stringDesencriptada;
 }
 
-function copy() {
+function showConfirm() {
   let copyText = document.querySelector("#textareaOutput");
   copyText.select();
   document.execCommand("copy");
+  copyText.value = "";
+  copyText.classList.add("hidden-content");
+
+  checkCopy.style.display = "flex";
+
+  setTimeout(function () {
+    checkCopy.style.display = "none";
+    copyText.classList.remove("hidden-content");
+  }, 2000);
 }
 
 function clear() {

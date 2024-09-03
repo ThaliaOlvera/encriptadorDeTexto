@@ -18,14 +18,14 @@ h4 {
 }
 
 :root {
-  --Purple900: #001754;
-  --Purple800: #102665;
-  --Purple700: #203477;
-  --Purple600: #304388;
-  --Purple500: #405199;
-  --Purple400: #a2a3c6;
+  --BackgroundBlue: #001754;
+  --Blue1: #024873;
+  --Blue2: #022840;
+  --Blue3: #0a8cbf;
+  --Blue4: #88dff2;
+  --Black: #0a0c0d;
   --textWhite-color: #d7d7d7;
-  --textBlack-color: #616161;
+  --textGold-color: #c59400;
   --font-size-lx: 36px;
   --font-size-md: 24px;
   --font-size-sm: 20px;
@@ -33,10 +33,12 @@ h4 {
   --font-TitleText: montserrat;
 }
 
+/* Color Theme Swatches in Hex */
+
 header {
   width: 100%;
   height: 10vh;
-  background-color: var(--Purple800);
+  background-color: var(--Blue2);
 }
 
 header h1 {
@@ -44,7 +46,7 @@ header h1 {
   padding-top: 20px;
   text-align: center;
   font-size: var(--font-size-lx);
-  color: var(--textWhite-color);
+  color: var(--textGold-color);
 }
 
 .bgColor {
@@ -54,7 +56,7 @@ header h1 {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background-color: var(--Purple800);
+  background-color: var(--Blue2);
 }
 
 .principal_container {
@@ -68,12 +70,9 @@ header h1 {
   flex-direction: column;
   text-align: center;
   justify-content: center;
-
-  background-color: var(--Purple800e);
 }
 
 .container_btn_encrypt {
-  background-color: var(--textWhite-color);
   display: flex;
   align-items: center;
   text-align: center;
@@ -83,7 +82,8 @@ header h1 {
   border-radius: 60px;
   margin-right: 22rem;
 
-  color: var(--Purple900);
+  color: var(--textWhite-color);
+  background-color: var(--Blue3);
 }
 
 .container_btn_encrypt img {
@@ -101,7 +101,6 @@ header h1 {
   align-items: center;
   justify-content: center;
 
-  background-color: var(--textWhite-color);
   width: 120px;
   height: 5rem;
   width: 7rem;
@@ -109,6 +108,7 @@ header h1 {
   border-radius: 60px;
   text-align: center;
   color: var(--Purple900);
+  background-color: var(--textGold-color);
 }
 
 .container_btn_decrypt img {
@@ -130,20 +130,22 @@ header h1 {
 }
 
 #textAreaEntry {
-  background-color: salmon;
   width: 100%;
   height: 30vh;
 
-  text-align: start;
+  text-align: center;
+  align-content: center;
 
   resize: none;
   outline: none;
   box-sizing: border-box;
   border-radius: 20px;
+
+  color: var(--textGold-color);
+  font-size: var(--font-size-sm);
 }
 
 #textareaOutput {
-  background-color: pink;
   width: 100%;
   height: 30vh;
 
@@ -155,6 +157,29 @@ header h1 {
   cursor: default;
   box-sizing: border-box;
   border-radius: 20px;
+
+  color: var(--textGold-color);
+  font-size: var(--font-size-sm);
+}
+
+.hidden-content::placeholder {
+  color: transparent;
+}
+
+.confirm_container {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 15rem;
+
+  color: var(--textGold-color);
+  font-size: var(--font-size-sm);
+}
+
+.confirm_container img {
+  width: 50px;
+  height: 50px;
 }
 
 .container_button {
@@ -175,7 +200,7 @@ header h1 {
 
   border-radius: 20px;
   border: none;
-  color: var(--Purple900);
+  color: var(--textGold-color);
   font-size: var(--font-size-sm);
   font-family: var(--font-TitleText);
 }
@@ -186,15 +211,15 @@ footer {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  color: var(--textWhite-color);
-  background-color: var(--Purple800);
+  color: var(--textGold-color);
+  background-color: var(--Blue2);
   text-align: center;
 }
 
 footer a {
   width: 100%;
   text-align: center;
-  color: var(--textWhite-color);
+  color: var(--textGold-color);
   text-decoration: none;
   font-size: var(--font-size-xsm);
 }
