@@ -75,14 +75,13 @@ function showConfirm() {
   let copyText = document.querySelector("#textareaOutput");
   copyText.select();
   document.execCommand("copy");
-  copyText.value = "";
-  copyText.classList.add("hidden-content");
+  copyText.style.opacity = 0;
 
   checkCopy.style.display = "flex";
 
   setTimeout(function () {
     checkCopy.style.display = "none";
-    copyText.classList.remove("hidden-content");
+    copyText.style.opacity = 1;
   }, 2000);
 }
 
