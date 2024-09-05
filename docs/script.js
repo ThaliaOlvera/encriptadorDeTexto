@@ -83,11 +83,10 @@ function showConfirm() {
   copyText.select();
   document.execCommand("copy");
   copyText.style.opacity = 0;
-
-  checkCopy.style.display = "flex";
+  checkCopy.classList.add("show");
 
   setTimeout(function () {
-    checkCopy.style.display = "none";
+    checkCopy.classList.remove("show");
     copyText.style.opacity = 1;
   }, 2000);
 }
