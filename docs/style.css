@@ -82,6 +82,7 @@ header h1 {
 
   color: var(--textWhite-color);
   background-color: var(--textGold-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .container_btn_encrypt img {
@@ -92,6 +93,16 @@ header h1 {
 .container_btn_encrypt h3 {
   margin-top: 0px;
   margin-bottom: 0px;
+}
+
+.container_btn_encrypt:hover {
+  transition: background-color 0.3s ease, transform 0.3s ease-out,
+    font-size 0.3s ease;
+  font-size: var(--font-size-sm);
+  transform: scale(1.2);
+  color: var(--textGold-color);
+  background-color: var(--textWhite-color);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
 .container_btn_decrypt {
@@ -105,8 +116,9 @@ header h1 {
   height: 7rem;
   border-radius: 60px;
   text-align: center;
-  color: var(--Purple900);
+  color: var(--textWhite-color);
   background-color: var(--textGold-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .container_btn_decrypt img {
@@ -116,6 +128,16 @@ header h1 {
 .container_btn_decrypt h3 {
   margin-top: 0px;
   margin-bottom: 0px;
+}
+
+.container_btn_decrypt:hover {
+  transform: scale(1.2);
+  background-color: var(--textWhite-color);
+  font-size: var(--font-size-sm);
+  color: var(--textGold-color);
+  transition: background-color 0.3s ease, transform 0.3s ease-out,
+    font-size 0.3s ease;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
 .text_container {
@@ -138,6 +160,7 @@ header h1 {
   box-sizing: border-box;
   border-radius: 20px;
   text-transform: lowercase;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 
   font-size: var(--font-size-sm);
 }
@@ -155,6 +178,7 @@ header h1 {
   box-sizing: border-box;
   border-radius: 20px;
   text-transform: lowercase;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 
   font-size: var(--font-size-sm);
   margin-bottom: 8px;
@@ -195,6 +219,16 @@ header h1 {
   color: var(--textGold-color);
   font-size: var(--font-size-sm);
   font-family: var(--font-TitleText);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.container_button button:hover {
+  transform: scale(1.1);
+  background-color: var(--textGold-color);
+  color: var(--textWhite-color);
+  transition: background-color 0.3s ease, transform 0.3s ease-out,
+    font-size 0.3s ease;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
 footer {
