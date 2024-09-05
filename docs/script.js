@@ -5,11 +5,11 @@ document.querySelector("#copy").addEventListener("click", showConfirm);
 document.querySelector("#clearText").addEventListener("click", clear);
 
 function btnEncriptar() {
-  const textoOriginal = textArea.value;
-  const caracteresValidos = /^[a-z\s]*$/;
+  let textoOriginal = textArea.value;
 
-  if (!caracteresValidos.test(textoOriginal)) {
-    errorAlerta.style.display = "flex";
+  textoOriginal = textoOriginal.toLowerCase().replace(/[^a-z\s]/g, "");
+
+  if (textoOriginal === "") {
     return false;
   }
 
@@ -43,10 +43,17 @@ function encriptar(stringEncriptada) {
 }
 
 function btnDesencriptar() {
-  const textoEncriptado = desencriptar(textArea.value);
+  let textoEncriptado = desencriptar(textArea.value);
+  textoEncriptado = textoEncriptado.toLowerCase().replace(/[^a-z\s]/g, "");
+
+  if (textoEncriptado === "") {
+    return false;
+  }
+
   mensaje.value = textoEncriptado;
   textArea.value = "";
-  contenedor.appendChild(boton);
+
+  return true;
 }
 
 function desencriptar(stringDesencriptada) {
