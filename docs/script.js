@@ -93,6 +93,8 @@ function showConfirm() {
 }
 
 function clear() {
+  textArea.value = "";
+
   mensaje.value = "";
   return true;
 }

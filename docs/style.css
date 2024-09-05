@@ -137,6 +137,7 @@ header h1 {
   outline: none;
   box-sizing: border-box;
   border-radius: 20px;
+  text-transform: lowercase;
 
   font-size: var(--font-size-sm);
 }
@@ -153,6 +154,7 @@ header h1 {
   cursor: default;
   box-sizing: border-box;
   border-radius: 20px;
+  text-transform: lowercase;
 
   font-size: var(--font-size-sm);
   margin-bottom: 8px;
