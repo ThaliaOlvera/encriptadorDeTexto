@@ -110,8 +110,6 @@ header h1 {
   align-items: center;
   justify-content: center;
 
-  width: 120px;
-  height: 5rem;
   width: 7rem;
   height: 7rem;
   border-radius: 60px;
@@ -190,8 +188,10 @@ textarea::selection {
 }
 
 .confirm_container {
+  width: 100%;
   display: flex;
   align-items: center;
+  justify-content: center;
   position: fixed;
   top: 60%;
   left: 40%;
@@ -329,5 +329,83 @@ footer {
   .confirm_container {
     top: 50%;
     left: 30%;
+  }
+}
+
+/*Mobile view*/
+@media (max-width: 600px) {
+  .principal_container {
+    top: 8rem;
+
+    width: 80%;
+    height: auto;
+  }
+
+  .container_btn_encrypt {
+    position: absolute;
+    top: 12%;
+    left: 10%;
+    width: 6rem;
+    height: 6rem;
+  }
+
+  .container_btn_decrypt {
+    position: absolute;
+    bottom: 36%;
+    right: 5%;
+
+    width: 6rem;
+    height: 6rem;
+  }
+
+  #textAreaEntry {
+    border-radius: 50% 0px 50% 0px;
+  }
+
+  #textareaOutput {
+    border-radius: 50% 0px 50% 0px;
+  }
+
+  .container_button {
+    width: 100%;
+    height: 40%;
+
+    margin-top: 28px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .container_button button {
+    width: 100%;
+  }
+
+  .container_btn_decrypt:hover {
+    transform: scale(1.2);
+    font-size: var(--font-size-xsm);
+  }
+
+  .container_btn_encrypt:hover {
+    transform: scale(1.2);
+    font-size: var(--font-size-xsm);
+  }
+
+  .confirm_container {
+    top: 40%;
+    left: 0%;
+  }
+
+  .confirm_container img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .confirm_container P {
+    display: none;
+  }
+
+  footer {
+    padding: 8px;
   }
 }
