@@ -1,7 +1,5 @@
 # Text Encryptor 🔒
 
-![Text Encryptor]
-
 ## Descripción
 
 El **Text Encryptor** es una aplicación web simple pero poderosa que te permite encriptar y desencriptar mensajes de texto. Con una interfaz fácil de usar, podrás convertir tus mensajes en un formato codificado y luego restaurarlos a su estado original. ¡Ideal para compartir mensajes secretos!
