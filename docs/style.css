@@ -31,6 +31,7 @@ h4 {
   --font-size-md: 24px;
   --font-size-sm: 20px;
   --font-size-xsm: 16px;
+  --font-size-xxsm: 14px;
   --font-TitleText: montserrat;
 }
 
@@ -219,7 +220,7 @@ header h1 {
 #textAreaEntry {
   width: 100%;
   height: 30vh;
-  margin-bottom: 14px;
+  margin-bottom: 1rem;
 
   text-align: center;
   align-content: center;
@@ -250,7 +251,7 @@ header h1 {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 
   font-size: var(--font-size-sm);
-  margin-bottom: 8px;
+  margin-bottom: 1rem;
   transition: opacity 0.15s ease-in-out;
 }
 
@@ -357,7 +358,7 @@ footer p {
   color: var(--Blue4);
 }
 
-/*Mobile view*/
+/*Tablet view*/
 @media (max-width: 600px) {
   .principal_container {
     display: grid;
@@ -394,7 +395,7 @@ footer p {
   }
 
   .principal_container {
-    top: 8rem;
+    top: 6rem;
 
     width: 80%;
     height: auto;
@@ -402,23 +403,26 @@ footer p {
 
   .container_btn_encrypt {
     position: absolute;
-    top: 12%;
-    left: 10%;
-    width: 6rem;
-    height: 6rem;
+    top: 10%;
+    left: 76%;
+    width: 5.5rem;
+    height: 5.5rem;
+    font-size: var(--font-size-xxsm);
   }
 
   .container_btn_decrypt {
     position: absolute;
-    bottom: 36%;
-    right: 5%;
+    bottom: 50%;
+    right: 2%;
 
-    width: 6rem;
-    height: 6rem;
+    width: 5.5rem;
+    height: 5.5rem;
+    font-size: var(--font-size-xxsm);
   }
 
   #textAreaEntry {
     border-radius: 50% 0px 50% 0px;
+    margin-bottom: 3rem;
   }
 
   #textareaOutput {
@@ -429,7 +433,7 @@ footer p {
     width: 100%;
     height: 40%;
 
-    margin-top: 10px;
+    margin-top: 0px;
 
     display: flex;
     flex-direction: column;
@@ -452,7 +456,7 @@ footer p {
   }
 
   .confirm_container {
-    top: 40%;
+    top: 45%;
     left: 0%;
   }
 
@@ -472,5 +476,42 @@ footer p {
     align-content: end;
 
     margin: 0px 0px 0px 0px;
+  }
+}
+
+/*Mobiel view*/
+@media (max-width: 425px) {
+  .container_btn_encrypt {
+    top: 10%;
+    left: 75%;
+  }
+
+  .container_btn_decrypt {
+    bottom: 50%;
+    right: 3%;
+  }
+}
+
+@media (max-width: 375px) {
+  .container_btn_encrypt {
+    top: 10%;
+    left: 66%;
+  }
+
+  .container_btn_decrypt {
+    bottom: 50%;
+    right: 3%;
+  }
+}
+
+@media (max-width: 242px) {
+  .container_btn_encrypt {
+    top: 10%;
+    left: 60%;
+  }
+
+  .container_btn_decrypt {
+    bottom: 50%;
+    right: 4%;
   }
 }
