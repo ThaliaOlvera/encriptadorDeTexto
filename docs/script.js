@@ -44,16 +44,19 @@ function encriptar(stringEncriptada) {
 
 function btnDesencriptar() {
   let textoEncriptado = desencriptar(textArea.value);
-  textoEncriptado = textoEncriptado.toLowerCase().replace(/[^a-z\s]/g, "");
+  let textoADesencriptar = "";
 
-  if (textoEncriptado === "") {
+  if (textoEncriptado !== "") {
+    textoADesencriptar = textArea.value;
+  } else if (mensaje.value !== "") {
+    textoADesencriptar = mensaje.value;
+  } else {
     return false;
   }
+  const textoDesencriptado = desencriptar(textoADesencriptar);
 
-  mensaje.value = textoEncriptado;
+  mensaje.value = textoDesencriptado;
   textArea.value = "";
-
-  return true;
 }
 
 function desencriptar(stringDesencriptada) {
